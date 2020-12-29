@@ -17,9 +17,10 @@ def main():
 
     args = parser.parse_args()
     if args.fasm2openfpga:
-
-        xml = fasm2openfpga(args.fasm)
-        xml.write(open(args.bitstream, 'wb'), encoding='utf-8', pretty_print=True)
+        with open(args.fasm) as fasm_file:
+            fasm = fasm_file.readlines()
+            xml = fasm2openfpga(fasm)
+            xml.write(open(args.bitstream, 'wb'), encoding='utf-8', pretty_print=True)
 
     else:
 

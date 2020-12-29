@@ -1,5 +1,5 @@
-import sys
 import lxml.etree as ET
+
 
 def fasm2openfpga(fasm, fabric_independent=False):
 
@@ -12,7 +12,7 @@ def fasm2openfpga(fasm, fabric_independent=False):
         entry.attrib['id'] = str(id_num)
         entry.attrib['value'] = bit
         entry.attrib['path'] = fasm_entry
-        entry.text="\n\t"
+        entry.text = "\n\t"
         id_num = id_num + 1
 
     return tree

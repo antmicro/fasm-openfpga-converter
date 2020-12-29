@@ -34,6 +34,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     entry_points={
-        'console_scripts': ['fasm_openfpga_converter=fasm_openfpga_converter.__main__:main'],
+        'console_scripts':
+        ['fasm_openfpga_converter=fasm_openfpga_converter.__main__:main'],
     },
 )
